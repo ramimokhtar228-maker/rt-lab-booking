@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#9f1239"/>
+<title>RT LAB · بوابة النظام</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{font-family:Cairo,sans-serif;margin:0;min-height:100vh;background:linear-gradient(160deg,#9f1239 0%,#7f0d2d 40%,#f1f5f9 40%);color:#1e293b}
+.wrap{max-width:900px;margin:0 auto;padding:32px 16px}
+.brand{color:#fff;margin-bottom:28px}
+.brand h1{margin:0;font-size:32px;font-weight:900}
+.brand p{margin:6px 0 0;opacity:.95}
+.grid{display:grid;gap:16px}
+@media(min-width:700px){.grid{grid-template-columns:1fr 1fr}}
+a.card{display:block;background:#fff;border-radius:20px;padding:28px 22px;text-decoration:none;color:inherit;box-shadow:0 10px 30px rgba(0,0,0,.1);border:1px solid #e2e8f0;transition:.2s}
+a.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(159,18,57,.15)}
+a.card h2{margin:0 0 8px;font-size:22px;color:#9f1239}
+a.card p{margin:0;color:#64748b;font-size:14px;line-height:1.6}
+.badge{display:inline-block;margin-top:14px;background:#9f1239;color:#fff;padding:8px 14px;border-radius:10px;font-weight:800;font-size:13px}
+.note{margin-top:22px;background:#fff;border-radius:14px;padding:16px;font-size:13px;color:#475569;line-height:1.7;border:1px solid #e2e8f0}
+.note b{color:#9f1239}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">
+    <h1>RT LAB</h1>
+    <p>معامل رامي مختار · نظام الحجز والنتائج المترابط</p>
+  </div>
+  <div class="grid">
+    <a class="card" href="booking.html">
+      <h2>① برنامج الحجز</h2>
+      <p>حجز المرضى · رفع الروشتة · التسعير · تأكيد الموعد · عضويات الولاء · باقات · واتساب · بوابة العميل</p>
+      <span class="badge">فتح الحجز ←</span>
+    </a>
+    <a class="card" href="lab.html">
+      <h2>② برنامج النتائج (LIS)</h2>
+      <p>استيراد الحجوزات · المرضى · الطلبات · إدخال النتائج · التقارير · المالية · المخزون · HR · المستلزمات</p>
+      <span class="badge">فتح النتائج ←</span>
+    </a>
+  </div>
+  <div class="note">
+    <b>البيانات موحّدة عبر Supabase.</b><br>
+    مسار العمل: حجز وتسعير وتأكيد من برنامج الحجز ← بعد السحب تظهر في LIS للاستيراد ← نتائج وتقارير من LIS.<br>
+    نفس مشروع السحابة في الملفين — لا تحتاج نسخ يدوي بين البرنامجين.
+  </div>
+</div>
+</body>
+</html>
